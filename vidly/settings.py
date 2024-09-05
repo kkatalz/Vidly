@@ -23,10 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'lvy478_!4oazk4@1u%-(*vs*8o6r&#b0)kb(1*-xjyj1#gmzr('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['.railway.app']
+ALLOWED_HOSTS = ['web-production-fb02e.up.railway.app']
 
+CSRF_TRUSTED_ORIGINS = ['https://web-production-fb02e.up.railway.app']
 
 # Application definition
 # email = karbo.zlata@gmail.com, pass=akula9090
@@ -51,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'vidly.urls'
 
